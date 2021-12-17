@@ -1,5 +1,6 @@
 import { generateMonthCalendar } from '../services';
 import { Controller } from '../types';
+import { OK } from '../constants/status';
 
 const getCalendarNow: Controller = async (_req, res, next) => {
   try {
@@ -9,7 +10,7 @@ const getCalendarNow: Controller = async (_req, res, next) => {
 
     const calendar = await generateMonthCalendar(year, month);
 
-    res.status(200).json(calendar);
+    res.status(OK).json(calendar);
   } catch (err) {
     next(err);
   }

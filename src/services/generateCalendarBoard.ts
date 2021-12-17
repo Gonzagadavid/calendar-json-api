@@ -1,18 +1,21 @@
+import {
+  ONE, SEVEN, THIRTHY, THIRTHY_ONE, ZERO,
+} from '../constants/numbers';
 import { Calendar } from '../types';
 import generateBoard from './helper/generateBoard';
 import isThirtyOne from './isThirtyOne';
 
 const generateCalendarBoard: Calendar = (year, month) => {
-  const lastDay = isThirtyOne(year, month) ? 31 : 30;
+  const lastDay = isThirtyOne(year, month) ? THIRTHY_ONE : THIRTHY;
   const board = generateBoard();
-  const dayInit = new Date(year, month, 1).getDay();
-  console.log(dayInit);
-  let day = 0;
+  const dayInit = new Date(year, month, ONE).getDay();
+
+  let day = ZERO;
 
   const calendarBoard = board.map((week, weekCount) => week.map((empty, index) => {
-    const position = weekCount * 7 + index;
+    const position = weekCount * SEVEN + index;
     if (position < dayInit || day >= lastDay) return empty;
-    day += 1;
+    day += ONE;
     return day;
   }));
 
