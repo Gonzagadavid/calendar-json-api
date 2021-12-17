@@ -1,16 +1,12 @@
-import { generateMonthCalendar } from '../services';
-import { Controller } from '../types';
+import { monthNowCalendar } from '../services';
+import { Handler } from '../types';
 import { OK } from '../constants/status';
-import monthNames from '../constants/names';
-import { defaultMonth, defaultYear } from '../services/helper/defaultDate';
 
-const getCalendarNow: Controller = (_req, res, next) => {
+const getCalendarNow: Handler = (_req, res, next) => {
   try {
-    const monthName = monthNames[defaultMonth];
-    const year = defaultYear;
-    const calendar = generateMonthCalendar(defaultYear, defaultMonth);
+    const calendar = monthNowCalendar();
 
-    res.status(OK).json({ [monthName]: calendar, year });
+    res.status(OK).json(calendar);
   } catch (err) {
     next(err);
   }

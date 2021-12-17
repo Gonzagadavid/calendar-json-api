@@ -1,7 +1,7 @@
-import generateMonthCalendar from './generateMonthCalendar';
+import monthNowCalendar from './monthNowCalendar';
 import sum from './sum';
 
 export {
-  generateMonthCalendar,
+  monthNowCalendar,
   sum,
 };

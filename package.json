@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn --ignore-watch src/node_modules --transpile-only src index.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["calendar", "API", "calendario", "JSON"],
+  "author": "David Gonzaga",
   "license": "ISC",
   "dependencies": {
     "@types/express": "^4.17.13",
