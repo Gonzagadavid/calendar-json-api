@@ -1,8 +1,10 @@
-import CalendarModel from '../models/CalendarModel';
 import { Calendar } from '../types';
+import generateCalendarBoard from './generateCalendarBoard';
 
 const generateMonthCalendar: Calendar = (year, month) => {
-  console.log(new CalendarModel());
+  const board = generateCalendarBoard(year, month);
+
+  return board;
 };
 
 export default generateMonthCalendar;

@@ -9,4 +9,4 @@ const app = express();
 
 app.use('/', router);
 
-app.listen(PORT, () => `started in port ${PORT}`);
+app.listen(PORT, () => console.log(`started in port ${PORT}`));
