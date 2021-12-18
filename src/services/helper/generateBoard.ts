@@ -1,8 +1,8 @@
-import { FIVE, SEVEN, ZERO } from '../../constants/numbers';
+import { SEVEN, SIX, ZERO } from '../../constants/numbers';
 import { Board } from '../../types';
 
 const generateBoard: Board = () => {
-  const board = Array(FIVE).fill(Array(SEVEN).fill(ZERO));
+  const board = Array(SIX).fill(Array(SEVEN).fill(ZERO));
   return board;
 };
 

@@ -6,6 +6,8 @@ export const FOUR = 4;
 
 export const FIVE = 5;
 
+export const SIX = 6;
+
 export const SEVEN = 7;
 
 export const THIRTHY = 30;

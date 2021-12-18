@@ -17,7 +17,7 @@ const generateCalendarBoard: CalendarBoard = (year, month) => {
     if (position < dayInit || day >= lastDay) return empty;
     day += ONE;
     return day;
-  }));
+  })).filter((week) => !week.every((day) => !day));
 
   return calendarBoard;
 };

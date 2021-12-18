@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 
-type CalendarResp = {
+export type CalendarResp = {
   January?: string,
   February?: string,
   March?: string,
@@ -33,10 +33,12 @@ export type CalendarNow = () => CalendarResp;
 
 export type Calendar = (_year: number, _mounth: number) => CalendarResp;
 
-export type CalendarService = (_year: number, _mounth: number) => CalendarResp;
+export type CalendarYear = (_year: number) => CalendarResp;
 
 export type CheckDate = (_year: number, _mounth: number) => boolean;
 
 export type Board = () => number[][];
 
 export type DateCompleted = { month: number, year: number}
+
+export type Dateyear = { year: number}
