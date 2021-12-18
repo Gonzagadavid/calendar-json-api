@@ -1,4 +1,5 @@
 import { defaultYear } from '../constants/defaultDate';
+import { FOUR } from '../constants/numbers';
 import { INVALID_YEAR } from '../errors';
 import { Handler } from '../types';
 
@@ -12,8 +13,7 @@ const validationYear: Handler = (req, _res, next) => {
     return next();
   }
 
-  if (Number.isNaN(+year) || year.length !== 4) return next(INVALID_YEAR);
-
+  if (Number.isNaN(+year) || year.length !== FOUR) return next(INVALID_YEAR);
   req.date = { ...date, year: +year };
 
   return next();

@@ -38,3 +38,5 @@ export type CalendarService = (_year: number, _mounth: number) => CalendarResp;
 export type CheckDate = (_year: number, _mounth: number) => boolean;
 
 export type Board = () => number[][];
+
+export type DateCompleted = { month: number, year: number}

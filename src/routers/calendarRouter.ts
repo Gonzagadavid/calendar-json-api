@@ -1,7 +1,6 @@
 import { Router } from 'express';
 import { getCalendarByMonth, getCalendarNow } from '../controllers';
-import validationMonth from '../middlewares/validationMonth';
-import validationYear from '../middlewares/validationYear';
+import { validationMonth, validationYear } from '../middlewares';
 
 const router = Router();
 
