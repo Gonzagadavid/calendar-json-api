@@ -3,7 +3,8 @@ import { INVALID_YEAR } from '../errors';
 import { Handler } from '../types';
 
 const validationYear: Handler = (req, _res, next) => {
-  const { year } = req.query;
+  const { query, params } = req;
+  const year = query.year || params.year;
   const { date } = req;
 
   if (!year) {

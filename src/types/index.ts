@@ -31,6 +31,8 @@ export type CalendarBoard = (_year: number, _mounth: number) => number[][];
 
 export type CalendarNow = () => CalendarResp;
 
+export type Calendar = (_year: number, _mounth: number) => CalendarResp;
+
 export type CalendarService = (_year: number, _mounth: number) => CalendarResp;
 
 export type CheckDate = (_year: number, _mounth: number) => boolean;
