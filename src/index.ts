@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import router from './routers/calendarRouter';
 import { error } from './middlewares';
+import routerRoot from './routers/root';
 
 dotenv.config();
 
@@ -10,7 +10,7 @@ const started = `started in port ${PORT}`;
 
 const app = express();
 
-app.use('/', router);
+app.use('/', routerRoot);
 
 app.use(error);
 app.listen(PORT, () => console.log(started));
