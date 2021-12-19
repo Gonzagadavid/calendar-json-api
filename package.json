@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "ts-node-dev --respawn --ignore-watch src/node_modules --transpile-only src index.ts"
   },
   "keywords": [

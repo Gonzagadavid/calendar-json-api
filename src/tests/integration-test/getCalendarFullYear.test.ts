@@ -1,5 +1,6 @@
 import request from 'supertest';
 import monthNames from '../../constants/names';
+import toFirstUpperCase from '../../services/helper/toFirstUpperCase';
 import { fullyear } from '../constants';
 
 const date = new Date();
@@ -30,7 +31,7 @@ describe('Get /fullyear/:year', () => {
     const response = await req.get('/2022');
     expect(response.body).toHaveProperty('year', 2022);
     monthNames.forEach((month) => {
-      expect(response.body).toHaveProperty(month);
+      expect(response.body).toHaveProperty(toFirstUpperCase(month));
     });
   });
 
@@ -39,7 +40,7 @@ describe('Get /fullyear/:year', () => {
     const response = await req.get('/');
     expect(response.body).toHaveProperty('year', year);
     monthNames.forEach((month) => {
-      expect(response.body).toHaveProperty(month);
+      expect(response.body).toHaveProperty(toFirstUpperCase(month));
     });
   });
 
@@ -48,14 +49,14 @@ describe('Get /fullyear/:year', () => {
     const response = await req.get('/2022');
     monthNames.forEach((month, position) => {
       const firstDay = new Date(2022, position, 1).getDay();
-      expect(response.body[month][0][firstDay]).toBe(1);
+      expect(response.body[toFirstUpperCase(month)][0][firstDay]).toBe(1);
     });
   });
   it('verifica se possui 7 dias em cada array de semana', async () => {
     const req = await request('http://localhost:3500/fullyear');
     const response = await req.get('/2022');
     monthNames.forEach((month) => {
-      response.body[month].forEach((week: number[]) => {
+      response.body[toFirstUpperCase(month)].forEach((week: number[]) => {
         expect(week).toHaveLength(7);
       });
     });

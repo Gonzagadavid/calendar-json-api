@@ -1,8 +1,9 @@
 import request from 'supertest';
 import monthNames from '../../constants/names';
+import toFirstUpperCase from '../../services/helper/toFirstUpperCase';
 
 const date = new Date();
-const month = monthNames[date.getMonth()];
+const month = toFirstUpperCase(monthNames[date.getMonth()]);
 const year = date.getFullYear();
 
 describe('Get /', () => {

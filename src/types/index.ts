@@ -42,3 +42,5 @@ export type Board = () => number[][];
 export type DateCompleted = { month: number, year: number}
 
 export type Dateyear = { year: number}
+
+export type UpperCase = (_word: string) => string

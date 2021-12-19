@@ -28,27 +28,27 @@ describe('Get /:month', () => {
     const req = await request('http://localhost:3500/month');
     const response = await req.get('/february?year=2022');
     expect(response.body).toHaveProperty('year', 2022);
-    expect(response.body).toHaveProperty('february');
+    expect(response.body).toHaveProperty('February');
   });
 
   it('verifica quando não passado o ano é utilizado o ano atual', async () => {
     const req = await request('http://localhost:3500/month');
     const response = await req.get('/july');
     expect(response.body).toHaveProperty('year', year);
-    expect(response.body).toHaveProperty('july');
+    expect(response.body).toHaveProperty('July');
   });
 
   it('verifica se o primeiro dia corresponde ao dia da semana correto', async () => {
     const firstDay = new Date(2022, 0, 1).getDay();
     const req = await request('http://localhost:3500/month');
     const response = await req.get('/january?year=2022');
-    expect(response.body.january[0][firstDay]).toBe(1);
+    expect(response.body.January[0][firstDay]).toBe(1);
   });
 
   it('verifica se possui 7 dias em cada array de semana', async () => {
     const req = await request('http://localhost:3500/month');
     const response = await req.get('/january?year=2022');
-    response.body.january.forEach((week: number[]) => {
+    response.body.January.forEach((week: number[]) => {
       expect(week).toHaveLength(7);
     });
   });
