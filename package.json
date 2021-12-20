@@ -4,9 +4,16 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "engines": { 
+    "node": "16.0.0" 
+  },
   "scripts": {
     "test": "jest",
-    "start": "ts-node-dev --respawn --ignore-watch src/node_modules --transpile-only src index.ts"
+    "dev": "ts-node-dev --respawn --ignore-watch src/node_modules --transpile-only src index.ts",
+    "start": "node dist/index.js",
+    "postinstall": "tsc",
+    "watch-node": "nodemon dist/index.js",
+    "watch-ts": "tsc -w"
   },
   "keywords": [
     "calendar",
