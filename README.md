@@ -31,6 +31,7 @@ Returns the calendar of the current date
 GET https://calendarjsonapi.herokuapp.com/month
 ```  
 
+
 As the date is December 2021, the response when making a request for this endpoint would be:
 
 ```json
