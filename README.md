@@ -1,4 +1,4 @@
-# Calendar JSON API {...}
+# Calendar JSON API {...} :calendar:
 
 ## Sumary
 
@@ -28,7 +28,7 @@ The Caledar JSON API can be used to obtain the calendar in 2D array format, rece
 Returns the calendar of the current date
 
 ```url
-http://localhost:3500/month
+GET https://calendarjsonapi.herokuapp.com/month
 ```  
 
 As the date is December 2021, the response when making a request for this endpoint would be:
@@ -62,11 +62,11 @@ As the date is December 2021, the response when making a request for this endpoi
 Returns the calendar of the month entered as a parameter in the current year
 
 ```url
-http://localhost:3500/month/<monthName>
+GET https://calendarjsonapi.herokuapp.com/month/<monthName>
 ```  
 Being the current year 2021, when making a request to the endpoint:
 ```url
-http://localhost:3500/month/november
+GET https://calendarjsonapi.herokuapp.com/month/november
 ```
 the response returned will be:
 
@@ -99,12 +99,12 @@ the response returned will be:
 Returns the month and year calendar entered as a parameter in the url
 
 ```url
-http://localhost:3500/month/<monthName>?year=<yearValue>
+GET https://calendarjsonapi.herokuapp.com/month/<monthName>?year=<yearValue>
 ```
 Making a request for this end point, for the month of October, of the year 2012
 
 ```url
-http://localhost:3500/month/october?year=2012
+GET https://calendarjsonapi.herokuapp.com/month/october?year=2012
 ```
 
 the response returned will be:
@@ -138,7 +138,7 @@ the response returned will be:
 Returns the complete calendar for the current year
 
 ```url
-http://localhost:3500/fullyear
+GET https://calendarjsonapi.herokuapp.com/fullyear
 ```
 
 Being the current year 2021, when making a request to the endpoint, the response returned will be:
@@ -242,12 +242,12 @@ Being the current year 2021, when making a request to the endpoint, the response
 Return last year's complete calendar as parameter
 
 ```url
-http://localhost:3500/fullyear/<year>
+GET https://calendarjsonapi.herokuapp.com/fullyear/<year>
 ```
 Entering the year 2031 as a parameter
 
 ```url
-http://localhost:3500/fullyear/2031
+GET https://calendarjsonapi.herokuapp.com/fullyear/2031
 ```
 the response returned will be:
 
@@ -384,4 +384,6 @@ Developed integration tests, using jest and supertest, for all endpoints
 
 # Deployment
 
+Deployment on [Heroku](GET https://www.heroku.com/)
 
+ <img src="./assets/icons/heroku.svg" alt="heroku icon" height="70" width="70">
