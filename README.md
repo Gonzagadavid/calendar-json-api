@@ -93,3 +93,31 @@ the response returned will be:
 | 28     | 29     | 30      |           |          |        |          |
 
 ---
+
+## By month name and year
+
+Returns the calendar of the month and last year as a parameter in the url
+
+```url
+http://localhost:3500/month/<monthName>?year=<yearValue>
+```
+Making a request for this end point, for the month of October, of the year 2012
+
+```url
+http://localhost:3500/month/october?year=2012
+```
+
+the response returned will be:
+
+```json
+{
+  "October":[
+    [  0,  1,  2,  3,  4,  5,  6],
+    [  7,  8,  9, 10, 11, 12, 13],
+    [ 14, 15, 16, 17, 18, 19, 20],
+    [ 21, 22, 23, 24, 25, 26, 27],
+    [ 28, 29, 30, 31,  0,  0,  0]
+    ],
+  "year": 2012
+}
+```
