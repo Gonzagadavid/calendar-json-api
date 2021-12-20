@@ -25,7 +25,11 @@ The Caledar JSON API can be used to obtain the calendar in 2D array format, rece
 
 ## Current month
 
-`http://localhost:3500/month` - Returns the calendar of the current date
+Returns the calendar of the current date
+
+```url
+http://localhost:3500/month
+```  
 
 As the date is December 2021, the response when making a request for this endpoint would be:
 
@@ -41,7 +45,7 @@ As the date is December 2021, the response when making a request for this endpoi
   "year": 2021
 }
 ```
-**December** 
+**December 2021** 
 
 | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
 | :-----:| :-----:| :------:| :--------:| :-------:| :-----:| :-------:|
@@ -50,3 +54,42 @@ As the date is December 2021, the response when making a request for this endpoi
 | 12     | 13     | 14      | 15        | 16       | 17     | 18       |
 | 19     | 20     | 21      | 22        | 23       | 24     | 25       |
 | 26     | 27     | 28      | 29        | 30       | 31     |          |
+
+---
+
+## By month name
+
+Returns the calendar of the last month as a parameter, of the current year
+
+```url
+http://localhost:3500/month/<monthName>
+```  
+Being the current year 2021, when making a request to the endpoint:
+```url
+http://localhost:3500/month/november
+```
+the response returned will be:
+
+```json
+{
+  "November":[
+    [  0,  1,  2,  3,  4,  5,  6],
+    [  7,  8,  9, 10, 11, 12, 13],
+    [ 14, 15, 16, 17, 18, 19, 20],
+    [ 21, 22, 23, 24, 25, 26, 27],
+    [ 28, 29, 30,  0,  0,  0,  0]
+    ],
+  "year": 2021
+}
+```
+**November 2021** 
+
+| Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
+| :-----:| :-----:| :------:| :--------:| :-------:| :-----:| :-------:|
+|        | 1      | 2       | 3         | 4        | 5      | 6        |
+| 7      | 8      | 9       | 10        | 11       | 12     | 13       |
+| 14     | 15     | 16      | 17        | 18       | 19     | 20       |
+| 21     | 22     | 23      | 24        | 25       | 26     | 27       |
+| 28     | 29     | 30      |           |          |        |          |
+
+---
