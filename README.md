@@ -235,6 +235,8 @@ Being the current year 2021, when making a request to the endpoint, the response
   ]
 }
 ```
+---
+
 ## By year
 
 Return last year's complete calendar as parameter
@@ -342,3 +344,28 @@ the response returned will be:
   ]
 }
 ```
+---
+
+# Technologies
+
+- Typescript
+- Express
+- Jest
+- Ts node dev
+- Super test
+- Dotenv
+- Http status code
+- Eslint
+
+<div align="center">
+  <img src="./assets/icons/typescript.svg" alt="typescript icon" height="70" width="70">
+  &nbsp;&nbsp;&nbsp;
+  <img src="./assets/icons/express.svg" alt="express icon" height="70" width="70">
+  &nbsp;&nbsp;&nbsp;
+  <img src="./assets/icons/jest.svg" alt="jest icon" height="70" width="70">
+  &nbsp;&nbsp;&nbsp;
+  <img src="./assets/icons/tsnode.svg" alt="tsnode icon" height="70" width="70">
+  &nbsp;&nbsp;&nbsp;
+  <img src="./assets/icons/eslint.svg" alt="eslint icon" height="70" width="70">
+  &nbsp;&nbsp;&nbsp;
+</div>
