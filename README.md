@@ -59,7 +59,7 @@ As the date is December 2021, the response when making a request for this endpoi
 
 ## By month name
 
-Returns the calendar of the last month as a parameter, of the current year
+Returns the calendar of the month entered as a parameter in the current year
 
 ```url
 http://localhost:3500/month/<monthName>
@@ -96,7 +96,7 @@ the response returned will be:
 
 ## By month name and year
 
-Returns the calendar of the month and last year as a parameter in the url
+Returns the month and year calendar entered as a parameter in the url
 
 ```url
 http://localhost:3500/month/<monthName>?year=<yearValue>
@@ -244,7 +244,7 @@ Return last year's complete calendar as parameter
 ```url
 http://localhost:3500/fullyear/<year>
 ```
-Passing the year 2031 as a parameter
+Entering the year 2031 as a parameter
 
 ```url
 http://localhost:3500/fullyear/2031
@@ -369,3 +369,17 @@ the response returned will be:
   <img src="./assets/icons/eslint.svg" alt="eslint icon" height="70" width="70">
   &nbsp;&nbsp;&nbsp;
 </div>
+
+---
+
+# Tests
+
+Developed integration tests, using jest and supertest, for all endpoints
+
+<img src="./assets/images/getCalendarNow.png" alt="tests results" width="100%">
+<img src="./assets/images/getCalendarByMonth.png" alt="tests results" width="100%">
+<img src="./assets/images/getCalendarFullYear.png" alt="tests results" width="100%">
+
+--- 
+
+# Deployment

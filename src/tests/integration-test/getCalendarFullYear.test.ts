@@ -7,26 +7,26 @@ const date = new Date();
 const year = date.getFullYear();
 
 describe('Get /fullyear/:year', () => {
-  it('varifica se retorna o status 409 quando passado um ano com menos de 4 digitos', async () => {
+  it('checks the returns the 409 status when a year entered as a parameter has less than 4 digits', async () => {
     const req = await request('http://localhost:3500/fullyear');
     const response = await req.get('/22');
     expect(response.statusCode).toBe(409);
   });
 
-  it('varifica se retorna uma mensagem de erro quando passado um mês não existente', async () => {
+  it('checks whether returns an error message when a non-existent month is entered as a parameter', async () => {
     const req = await request('http://localhost:3500/fullyear');
     const response = await req.get('/22');
     expect(response.body).toHaveProperty('message', 'the year must have at least four digits');
     expect(response.body.message).toBe('the year must have at least four digits');
   });
 
-  it('verifica o status 200', async () => {
+  it('check status 200', async () => {
     const req = await request('http://localhost:3500/fullyear');
     const response = await req.get('/2022');
     expect(response.statusCode).toBe(200);
   });
 
-  it('verifica se o mês e o ano corresponde ao passado por parametro', async () => {
+  it('check that the month and year correspond to the one entered by parameter', async () => {
     const req = await request('http://localhost:3500/fullyear');
     const response = await req.get('/2022');
     expect(response.body).toHaveProperty('year', 2022);
@@ -35,7 +35,7 @@ describe('Get /fullyear/:year', () => {
     });
   });
 
-  it('verifica quando não passado o ano é utilizado o ano atual', async () => {
+  it('check when not past year is used current year', async () => {
     const req = await request('http://localhost:3500/fullyear');
     const response = await req.get('/');
     expect(response.body).toHaveProperty('year', year);
@@ -44,7 +44,7 @@ describe('Get /fullyear/:year', () => {
     });
   });
 
-  it('verifica se o primeiro dia corresponde ao dia da semana correto', async () => {
+  it('check the first day matches the correct day of the week', async () => {
     const req = await request('http://localhost:3500/fullyear');
     const response = await req.get('/2022');
     monthNames.forEach((month, position) => {
@@ -52,7 +52,7 @@ describe('Get /fullyear/:year', () => {
       expect(response.body[toFirstUpperCase(month)][0][firstDay]).toBe(1);
     });
   });
-  it('verifica se possui 7 dias em cada array de semana', async () => {
+  it('check the amount of 7 days in each week array', async () => {
     const req = await request('http://localhost:3500/fullyear');
     const response = await req.get('/2022');
     monthNames.forEach((month) => {
@@ -62,7 +62,7 @@ describe('Get /fullyear/:year', () => {
     });
   });
 
-  it('verifica se possui 7 dias em cada array de semana', async () => {
+  it('checkth returns the calendar corresponding to the year entered by parameter', async () => {
     const req = await request('http://localhost:3500/fullyear');
     const response = await req.get('/2022');
     expect(response.body).toEqual(fullyear);
