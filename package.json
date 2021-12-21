@@ -5,7 +5,7 @@
   "main": "index.js",
   "engines": {
     "node": "16.0.0",
-    "npm":"8.1.2"
+    "npm": "8.1.2"
   },
   "scripts": {
     "test": "jest",
@@ -24,9 +24,11 @@
   "author": "David Gonzaga",
   "license": "ISC",
   "dependencies": {
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.0.3",
     "@types/supertest": "^2.0.11",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "http-status-codes": "^2.1.4",
