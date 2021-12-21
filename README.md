@@ -17,22 +17,24 @@
 
 # Introduction
 
-The Caledar JSON API can be used to obtain the calendar in 2D array format, receiving as the parameter the desired date, which can be the current month, selected month, or even the information of a whole year.
+The Calendar JSON API can be used to provide you with a calendar formatted as a 2D array.
+
+For that, you may choose to query for the selected month, or the selected year, as explained in the endpoints below.
 
 --- 
 
-# Endpoits
+# Endpoints
 
 ## Current month
 
-Returns the calendar of the current date
+Returns the calendar of the current date.
 
 ```url
 GET https://calendarjsonapi.herokuapp.com/month
 ```  
+*E.G:*
 
-
-As the date is December 2021, the response when making a request for this endpoint would be:
+Being the current date December 2021, the default response will be:
 
 ```json
 {
@@ -46,6 +48,9 @@ As the date is December 2021, the response when making a request for this endpoi
   "year": 2021
 }
 ```
+
+*I.E:*
+
 **December 2021** 
 
 | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
@@ -58,18 +63,21 @@ As the date is December 2021, the response when making a request for this endpoi
 
 ---
 
-## By month name
+## Month name
 
-Returns the calendar of the month entered as a parameter in the current year
+Returns current year`s month calendar.
 
 ```url
 GET https://calendarjsonapi.herokuapp.com/month/<monthName>
 ```  
-Being the current year 2021, when making a request to the endpoint:
+*E.G:*
+
+Being 2021 the current year, and November the desired month, the request must be sent as follows:
+
 ```url
 GET https://calendarjsonapi.herokuapp.com/month/november
 ```
-the response returned will be:
+And the response will be:
 
 ```json
 {
@@ -83,6 +91,9 @@ the response returned will be:
   "year": 2021
 }
 ```
+
+*I.E:*
+
 **November 2021** 
 
 | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
@@ -95,20 +106,24 @@ the response returned will be:
 
 ---
 
-## By month name and year
+## Month name and year
 
-Returns the month and year calendar entered as a parameter in the url
+Returns the calendar for the desired month and year.
 
 ```url
 GET https://calendarjsonapi.herokuapp.com/month/<monthName>?year=<yearValue>
 ```
-Making a request for this end point, for the month of October, of the year 2012
+
+*E.G:*
+
+Desired month: October
+Desired year: 2012
 
 ```url
 GET https://calendarjsonapi.herokuapp.com/month/october?year=2012
 ```
 
-the response returned will be:
+And the response will be:
 
 ```json
 {
@@ -122,6 +137,10 @@ the response returned will be:
   "year": 2012
 }
 ```
+
+*I.E:*
+
+
 **October 2012** 
 
 | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
@@ -136,13 +155,15 @@ the response returned will be:
 
 ## Current year
 
-Returns the complete calendar for the current year
+Returns the complete calendar for the current year.
 
 ```url
 GET https://calendarjsonapi.herokuapp.com/fullyear
 ```
 
-Being the current year 2021, when making a request to the endpoint, the response returned will be:
+*E.G:*
+
+Being the current year 2021, the response will be:
 
 ```json
 {
@@ -238,19 +259,22 @@ Being the current year 2021, when making a request to the endpoint, the response
 ```
 ---
 
-## By year
+## Year
 
-Return last year's complete calendar as parameter
+Returns the desired year's complete calendar.
 
 ```url
 GET https://calendarjsonapi.herokuapp.com/fullyear/<year>
 ```
+
+*E.G*
+
 Entering the year 2031 as a parameter
 
 ```url
 GET https://calendarjsonapi.herokuapp.com/fullyear/2031
 ```
-the response returned will be:
+the response will be:
 
 ```json
 {
