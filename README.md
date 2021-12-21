@@ -8,7 +8,7 @@
   - [Month name](#month-name)
   - [Month name and year](#month-name-and-year)
   - [Current year](#current-year)
-  - [year](#year)
+  - [Year](#year)
 - [Technologies](#technologies)
 - [Tests](#tests)
 - [Deployment](#deployment)
