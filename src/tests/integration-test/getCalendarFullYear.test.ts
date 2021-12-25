@@ -7,6 +7,9 @@ const date = new Date();
 const year = date.getFullYear();
 
 describe('Get /fullyear/:year', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
   it('checks the returns the 409 status when a year entered as a parameter has less than 4 digits', async () => {
     const req = await request('http://localhost:3500/fullyear');
     const response = await req.get('/22');

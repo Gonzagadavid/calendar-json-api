@@ -44,3 +44,5 @@ export type DateCompleted = { month: number, year: number}
 export type Dateyear = { year: number}
 
 export type UpperCase = (_word: string) => string
+
+export type LastDay = (_year: number, _mounth: number) => number;
