@@ -75,7 +75,7 @@ Being the current date December 2021, the default response will be:
 
 ---
 
-## Month name /month/<monthName>
+## Month name /month/\<monthName\>
 
 Returns current year`s month calendar.
 
@@ -118,7 +118,7 @@ And the response will be:
 
 ---
 
-## Month name and year /month/<monthName>?year=<yearValue>
+## Month name and year /month/\<monthName\>?year=\<yearValue\>
 
 Returns the calendar for the desired month and year.
 
@@ -271,7 +271,7 @@ Being the current year 2021, the response will be:
 ```
 ---
 
-## Year /fullyear/<year>
+## Year /fullyear/\<year\>
 
 Returns the desired year's complete calendar.
 
