@@ -3,6 +3,7 @@
 ## Sumary
 
 - [Introduction](#introduction)
+- [Instructions to start locally](#instructions-to-start-locally)
 - [Endpoints](#endpoints)
   - [Current month](#current-month)
   - [Month name](#month-name)
@@ -11,6 +12,7 @@
   - [Year](#year)
 - [Technologies](#technologies)
 - [Tests](#tests)
+- [Instructions to start tests locally](#instructions-to-start-tests-locally)
 - [Deployment](#deployment)
 
 --- 
@@ -23,9 +25,19 @@ For that, you may choose to query for the selected month, or the selected year, 
 
 --- 
 
+# Instructions to start locally
+
+- clone the repository `git clone git@github.com:Gonzagadavid/calendar-json-api.git`
+- enter the directory `cd calendar-json-api`
+- install the dependencies `npm install`
+- run the command `npm run dev`
+- the api will be available at http://localhost:3002
+
+---
+
 # Endpoints
 
-## Current month
+## Current month /month
 
 Returns the calendar of the current date.
 
@@ -63,7 +75,7 @@ Being the current date December 2021, the default response will be:
 
 ---
 
-## Month name
+## Month name /month/<monthName>
 
 Returns current year`s month calendar.
 
@@ -106,7 +118,7 @@ And the response will be:
 
 ---
 
-## Month name and year
+## Month name and year /month/<monthName>?year=<yearValue>
 
 Returns the calendar for the desired month and year.
 
@@ -153,7 +165,7 @@ And the response will be:
 
 ---
 
-## Current year
+## Current year /fullyear
 
 Returns the complete calendar for the current year.
 
@@ -259,7 +271,7 @@ Being the current year 2021, the response will be:
 ```
 ---
 
-## Year
+## Year /fullyear/<year>
 
 Returns the desired year's complete calendar.
 
@@ -406,6 +418,12 @@ Developed integration tests, using jest and supertest, for all endpoints
 <img src="./assets/images/getCalendarFullYear.png" alt="tests results" width="100%">
 
 --- 
+
+# Instructions to start tests locally
+
+- run the command `npm test`
+
+---
 
 # Deployment
 
