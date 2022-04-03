@@ -1,0 +1,111 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Calendar Json API",
+    "description": "The Calendar JSON API can be used to provide you with a calendar formatted as a 2D array",
+    "contact": {
+      "email": "gonzagadaviddev@gmail.com"
+    },
+    "license": "MIT",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://calendarjsonapi.herokuapp.com",
+      "description": "Production API"
+    },
+    {
+      "url": "http://localhost:3002",
+      "description": "Local API"
+    }
+  ],
+  "paths": {
+    "/month": {
+      "get": {
+        "summary": "Current month",
+        "description": "Returns the calendar of the current date",
+        "tags": [
+          "Month"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/month/{monthName}": {
+      "get": {
+        "summary": "Month name and year",
+        "description": "Returns the calendar for the desired month and year",
+        "tags": [
+          "Month"
+        ],
+        "parameters": [
+          {
+            "name": "monthName",
+            "in": "path",
+            "description": "the desired month.",
+            "requiired": true
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "description": "the desired year.",
+            "requiired": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "409": {
+            "description": "CONFLICT - Month name invalid or the year must have at least four digit"
+          }
+        }
+      }
+    },
+    "/fullyear": {
+      "get": {
+        "summary": "Current year",
+        "description": "Returns the complete calendar for the current year",
+        "tags": [
+          "Year"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "409": {
+            "description": "CONFLICT - Month name invalid or the year must have at least four digit"
+          }
+        }
+      }
+    },
+    "/fullyear/{year}": {
+      "get": {
+        "summary": "Current year",
+        "description": "Returns the complete calendar for the current year",
+        "tags": [
+          "Year"
+        ],
+        "parameters": [
+          {
+            "name": "year",
+            "in": "path",
+            "description": "the desired year.",
+            "requiired": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "409": {
+            "description": "CONFLICT - Month name invalid or the year must have at least four digit"
+          }
+        }
+      }
+    }
+  }
+}
