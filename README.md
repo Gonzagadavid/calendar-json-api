@@ -30,7 +30,7 @@ For that, you may choose to query for the selected month, or the selected year, 
 
 Access the swagger documentation:
 
-Production: `https://calendarjsonapi.herokuapp.com/docs/`
+Production: https://calendarjsonapi.herokuapp.com/docs
 
 Local: `http://localhost:3002/docs`
 
