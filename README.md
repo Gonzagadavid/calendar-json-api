@@ -4,6 +4,7 @@
 
 - [Introduction](#introduction)
 - [Instructions to start locally](#instructions-to-start-locally)
+- [Swagger documentation](#swagger-documentation)
 - [Endpoints](#endpoints)
   - [Current month](#current-month)
   - [Month name](#month-name)
@@ -25,13 +26,23 @@ For that, you may choose to query for the selected month, or the selected year, 
 
 --- 
 
+# Swagger documentation
+
+Access the swagger documentation:
+
+Production: `https://calendarjsonapi.herokuapp.com/docs/`
+
+Local: `http://localhost:3002/docs`
+
+---
+
 # Instructions to start locally
 
 - clone the repository `git clone git@github.com:Gonzagadavid/calendar-json-api.git`
 - enter the directory `cd calendar-json-api`
 - install the dependencies `npm install`
 - run the command `npm run dev`
-- the api will be available at http://localhost:3002
+- the api will be available at `http://localhost:3002`
 
 ---
 
@@ -393,6 +404,7 @@ the response will be:
 - Dotenv
 - Http status code
 - Eslint
+- Swagger
 
 <div align="center">
   <img src="./assets/icons/typescript.svg" alt="typescript icon" height="70" width="70">
@@ -404,6 +416,8 @@ the response will be:
   <img src="./assets/icons/tsnode.svg" alt="tsnode icon" height="70" width="70">
   &nbsp;&nbsp;&nbsp;
   <img src="./assets/icons/eslint.svg" alt="eslint icon" height="70" width="70">
+  &nbsp;&nbsp;&nbsp;
+  <img src="./assets/icons/swagger.svg" alt="eslint icon" height="70" width="70">
   &nbsp;&nbsp;&nbsp;
 </div>
 
