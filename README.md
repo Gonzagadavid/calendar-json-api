@@ -18,7 +18,7 @@
 
 --- 
 
-# Introduction
+# Introduction  
 
 The Calendar JSON API can be used to provide you with a calendar formatted as a 2D array.
 
