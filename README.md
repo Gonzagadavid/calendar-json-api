@@ -443,4 +443,4 @@ Developed integration tests, using jest and supertest, for all endpoints
 
 Deployment on [Heroku](https://www.heroku.com/)
 
- <img src="./assets/icons/heroku.svg" alt="heroku icon" height="70" width="70">
+ <img src="./assets/icons/heroku.svg" alt="heroku icon" height="70" width="70"> 
