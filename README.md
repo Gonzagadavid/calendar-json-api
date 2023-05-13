@@ -443,4 +443,4 @@ Developed integration tests, using jest and supertest, for all endpoints
 
 Deployment on [Adaptable](https://adaptable.io/)
 
- <img src="https://adaptable.io/img/color%20lockup.svg" alt="adaptable icon" height="70" width="70">
+ <img src="https://adaptable.io/img/color%20lockup.svg" alt="adaptable icon" height="170" width="170">
