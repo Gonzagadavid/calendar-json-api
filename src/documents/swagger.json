@@ -11,7 +11,7 @@
   },
   "servers": [
     {
-      "url": "https://calendar-json-api.up.railway.app",
+      "url": "https://calendar-json-app.adaptable.app",
       "description": "Production API"
     },
     {

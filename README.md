@@ -30,7 +30,7 @@ For that, you may choose to query for the selected month, or the selected year, 
 
 Access the swagger documentation:
 
-Production: https://calendar-json-api.up.railway.app/docs
+Production: https://calendar-json-app.adaptable.app/docs
 
 Local: `http://localhost:3002/docs`
 
@@ -53,7 +53,7 @@ Local: `http://localhost:3002/docs`
 Returns the calendar of the current date.
 
 ```url
-GET https://calendar-json-api.up.railway.app/month
+GET https://calendar-json-app.adaptable.app/month
 ```  
 *E.G:*
 
@@ -91,14 +91,14 @@ Being the current date December 2021, the default response will be:
 Returns current year`s month calendar.
 
 ```url
-GET https://calendar-json-api.up.railway.app/month/<monthName>
+GET https://calendar-json-app.adaptable.app/month/<monthName>
 ```  
 *E.G:*
 
 Being 2021 the current year, and November the desired month, the request must be sent as follows:
 
 ```url
-GET https://calendar-json-api.up.railway.app/month/november
+GET https://calendar-json-app.adaptable.app/month/november
 ```
 And the response will be:
 
@@ -134,7 +134,7 @@ And the response will be:
 Returns the calendar for the desired month and year.
 
 ```url
-GET https://calendar-json-api.up.railway.app/month/<monthName>?year=<yearValue>
+GET https://calendar-json-app.adaptable.app/month/<monthName>?year=<yearValue>
 ```
 
 *E.G:*
@@ -143,7 +143,7 @@ Desired month: October
 Desired year: 2012
 
 ```url
-GET https://calendar-json-api.up.railway.app/month/october?year=2012
+GET https://calendar-json-app.adaptable.app/month/october?year=2012
 ```
 
 And the response will be:
@@ -181,7 +181,7 @@ And the response will be:
 Returns the complete calendar for the current year.
 
 ```url
-GET https://calendar-json-api.up.railway.app/fullyear
+GET https://calendar-json-app.adaptable.app/fullyear
 ```
 
 *E.G:*
@@ -287,7 +287,7 @@ Being the current year 2021, the response will be:
 Returns the desired year's complete calendar.
 
 ```url
-GET https://calendar-json-api.up.railway.app/fullyear/<year>
+GET https://calendar-json-app.adaptable.app/fullyear/<year>
 ```
 
 *E.G*
@@ -295,7 +295,7 @@ GET https://calendar-json-api.up.railway.app/fullyear/<year>
 Entering the year 2031 as a parameter
 
 ```url
-GET https://calendar-json-api.up.railway.app/fullyear/2031
+GET https://calendar-json-app.adaptable.app/fullyear/2031
 ```
 the response will be:
 
@@ -441,5 +441,6 @@ Developed integration tests, using jest and supertest, for all endpoints
 
 # Deployment
 
-Deployment on [Railway](https://railway.app/)
+Deployment on [Adaptable](https://adaptable.io/)
 
+ <img src="https://adaptable.io/img/color%20lockup.svg" alt="adaptable icon" height="70" width="70">
